@@ -1,11 +1,52 @@
 import React from "react";
-import { View, Text, TouchableOpacity, Image } from "react-native";
+import { View, Text, TouchableOpacity, Image, FlatList } from "react-native";
 import { FontAwesome5 } from "@expo/vector-icons";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { Feather } from "@expo/vector-icons";
 import { AntDesign } from "@expo/vector-icons";
+import { RotationGestureHandler } from "react-native-gesture-handler";
 
 export default function Search() {
+  {
+    /**Component and Props of the Latest Updates */
+  }
+  const Colors = (props) => {
+    return (
+      <View
+        style={{
+          flexDirection: "row",
+          height: 150,
+          width: 150,
+        }}
+      >
+        <Image
+          source={{
+            uri: props.image,
+          }}
+          style={{ height: 150, width: 170, borderRadius: 30 }}
+        />
+        <View>
+          <Text
+            style={{
+              position: "absolute",
+              color: "white",
+              top: 100,
+              bottom: 0,
+              left: 0,
+              right: -21,
+              backgroundColor: "grey",
+            }}
+          >
+            HAHAHAH
+          </Text>
+        </View>
+      </View>
+    );
+  };
+
+  {
+    /**Beginning of The Code */
+  }
   return (
     <View
       style={{
@@ -101,7 +142,7 @@ export default function Search() {
       >
         <Image
           source={{
-            uri: "https://www.newsbtc.com/wp-content/uploads/2021/10/colorful-gb430c77bc_1920.jpg",
+            uri: "https://thumbor.forbes.com/thumbor/fit-in/1200x0/filters%3Aformat%28jpg%29/https%3A%2F%2Fspecials-images.forbesimg.com%2Fimageserve%2F60f6dfff00eb2e87a008e4ba%2F0x0.jpg",
           }}
           style={{ height: 350, width: 370, borderRadius: 30 }}
         />
@@ -125,6 +166,7 @@ export default function Search() {
               marginTop: 30,
               marginLeft: 20,
               fontSize: 20,
+              fontFamily: "Helvetica Neue",
             }}
           >
             Pink Ocean
@@ -133,9 +175,12 @@ export default function Search() {
           <View style={{ flexDirection: "row", alignContent: "center" }}>
             <AntDesign
               name="arrowsalt"
-              size={18}
+              size={15}
               color="white"
-              style={{ marginTop: 30 }}
+              style={{
+                marginTop: 30,
+                marginRight: 10,
+              }}
             />
             <Text
               style={{
@@ -149,6 +194,34 @@ export default function Search() {
             </Text>
           </View>
         </View>
+      </View>
+
+      {/**Latest and See All */}
+      <View
+        style={{
+          flexDirection: "row",
+          justifyContent: "space-between",
+          marginTop: 30,
+          alignItems: "center",
+        }}
+      >
+        <Text style={{ color: "white", fontSize: 35 }}>Latest</Text>
+        <TouchableOpacity>
+          <Text
+            style={{
+              color: "#494557",
+              fontSize: 20,
+              textDecorationLine: "underline",
+            }}
+          >
+            See all
+          </Text>
+        </TouchableOpacity>
+      </View>
+
+      {/**The Latest Components */}
+      <View>
+        <Colors image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxzqrj7zmjUdMMcrk58eXFPmSJjX4mCFihhDWwAaWAl43VXxrbHuJJohGodu_9r_QRMOY&usqp=CAU" />
       </View>
     </View>
   );

@@ -5,6 +5,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import Details from "./screens/Details";
 import Search from "./screens/Search";
+import Index from "./screens/Index";
 
 export default function App() {
   const MainNavigator = createStackNavigator();
@@ -14,8 +15,9 @@ export default function App() {
       <NavigationContainer>
         <MainNavigator.Navigator
           screenOptions={{ headerShown: false }}
-          initialRouteName="Search"
+          initialRouteName="Index"
         >
+          <MainNavigator.Screen name="Index" component={Index} />
           <MainNavigator.Screen name="Search" component={Search} />
           <MainNavigator.Screen name="Details" component={Details} />
         </MainNavigator.Navigator>
