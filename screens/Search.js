@@ -1,48 +1,27 @@
 import React from "react";
-import { View, Text, TouchableOpacity, Image, FlatList } from "react-native";
+import {
+  View,
+  Text,
+  TouchableOpacity,
+  Image,
+  FlatList,
+  SafeAreaView,
+  StyleSheet,
+} from "react-native";
 import { FontAwesome5 } from "@expo/vector-icons";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { Feather } from "@expo/vector-icons";
 import { AntDesign } from "@expo/vector-icons";
-import { RotationGestureHandler } from "react-native-gesture-handler";
+import {
+  RotationGestureHandler,
+  ScrollView,
+} from "react-native-gesture-handler";
 
 export default function Search() {
   {
-    /**Component and Props of the Latest Updates */
+    /**Creating a Flatlist of the Colors Data
+     */
   }
-  const Colors = (props) => {
-    return (
-      <View
-        style={{
-          flexDirection: "row",
-          height: 150,
-          width: 150,
-        }}
-      >
-        <Image
-          source={{
-            uri: props.image,
-          }}
-          style={{ height: 150, width: 170, borderRadius: 30 }}
-        />
-        <View>
-          <Text
-            style={{
-              position: "absolute",
-              color: "white",
-              top: 100,
-              bottom: 0,
-              left: 0,
-              right: -21,
-              backgroundColor: "grey",
-            }}
-          >
-            HAHAHAH
-          </Text>
-        </View>
-      </View>
-    );
-  };
 
   {
     /**Beginning of The Code */
@@ -99,6 +78,7 @@ export default function Search() {
           borderRadius: 18,
           padding: 20,
           backgroundColor: "#222029",
+          marginBottom: 10,
         }}
       >
         <TouchableOpacity>
@@ -112,117 +92,121 @@ export default function Search() {
       </View>
 
       {/**Popular and See All Text */}
-      <View
-        style={{
-          flexDirection: "row",
-          justifyContent: "space-between",
-          marginTop: 30,
-          alignItems: "center",
-        }}
-      >
-        <Text style={{ color: "white", fontSize: 35 }}>Popular</Text>
-        <TouchableOpacity>
-          <Text
-            style={{
-              color: "#494557",
-              fontSize: 20,
-              textDecorationLine: "underline",
-            }}
-          >
-            See all
-          </Text>
-        </TouchableOpacity>
-      </View>
-
-      {/** Image and Extra info */}
-      <View
-        style={{
-          marginTop: 30,
-        }}
-      >
-        <Image
-          source={{
-            uri: "https://thumbor.forbes.com/thumbor/fit-in/1200x0/filters%3Aformat%28jpg%29/https%3A%2F%2Fspecials-images.forbesimg.com%2Fimageserve%2F60f6dfff00eb2e87a008e4ba%2F0x0.jpg",
-          }}
-          style={{ height: 350, width: 370, borderRadius: 30 }}
-        />
+      <ScrollView>
         <View
           style={{
-            position: "absolute",
-            top: 270,
-            left: 0,
-            right: 3.3,
-            bottom: 0,
-            backgroundColor: "rgba(53, 49, 69, 0.8)",
-            borderBottomLeftRadius: 30,
-            borderBottomRightRadius: 30,
-            justifyContent: "space-between",
             flexDirection: "row",
+            justifyContent: "space-between",
+            marginTop: 30,
+            alignItems: "center",
           }}
         >
-          <Text
+          <Text style={{ color: "white", fontSize: 35 }}>Popular</Text>
+          <TouchableOpacity>
+            <Text
+              style={{
+                color: "#494557",
+                fontSize: 20,
+                textDecorationLine: "underline",
+              }}
+            >
+              See all
+            </Text>
+          </TouchableOpacity>
+        </View>
+
+        {/** Image and Extra info */}
+        <View
+          style={{
+            marginTop: 30,
+          }}
+        >
+          <TouchableOpacity>
+            <Image
+              source={{
+                uri: "https://thumbor.forbes.com/thumbor/fit-in/1200x0/filters%3Aformat%28jpg%29/https%3A%2F%2Fspecials-images.forbesimg.com%2Fimageserve%2F60f6dfff00eb2e87a008e4ba%2F0x0.jpg",
+              }}
+              style={{ height: 350, width: 370, borderRadius: 30 }}
+            />
+          </TouchableOpacity>
+          <View
             style={{
-              color: "white",
-              marginTop: 30,
-              marginLeft: 20,
-              fontSize: 20,
-              fontFamily: "Helvetica Neue",
+              position: "absolute",
+              top: 270,
+              left: 0,
+              right: 3.3,
+              bottom: 0,
+              backgroundColor: "rgba(53, 49, 69, 0.8)",
+              borderBottomLeftRadius: 30,
+              borderBottomRightRadius: 30,
+              justifyContent: "space-between",
+              flexDirection: "row",
             }}
           >
-            Pink Ocean
-          </Text>
-
-          <View style={{ flexDirection: "row", alignContent: "center" }}>
-            <AntDesign
-              name="arrowsalt"
-              size={15}
-              color="white"
-              style={{
-                marginTop: 30,
-                marginRight: 10,
-              }}
-            />
             <Text
               style={{
                 color: "white",
-                fontSize: 20,
                 marginTop: 30,
-                marginRight: 20,
+                marginLeft: 20,
+                fontSize: 20,
+                fontFamily: "Helvetica Neue",
               }}
             >
-              0.15
+              Pink Ocean
             </Text>
+
+            <View style={{ flexDirection: "row", alignContent: "center" }}>
+              <AntDesign
+                name="arrowsalt"
+                size={15}
+                color="white"
+                style={{
+                  marginTop: 30,
+                  marginRight: 10,
+                }}
+              />
+              <Text
+                style={{
+                  color: "white",
+                  fontSize: 20,
+                  marginTop: 30,
+                  marginRight: 20,
+                }}
+              >
+                0.15
+              </Text>
+            </View>
           </View>
         </View>
-      </View>
 
-      {/**Latest and See All */}
-      <View
-        style={{
-          flexDirection: "row",
-          justifyContent: "space-between",
-          marginTop: 30,
-          alignItems: "center",
-        }}
-      >
-        <Text style={{ color: "white", fontSize: 35 }}>Latest</Text>
-        <TouchableOpacity>
-          <Text
-            style={{
-              color: "#494557",
-              fontSize: 20,
-              textDecorationLine: "underline",
-            }}
-          >
-            See all
-          </Text>
-        </TouchableOpacity>
-      </View>
+        {/**Latest and See All */}
+        <View
+          style={{
+            flexDirection: "row",
+            justifyContent: "space-between",
+            marginTop: 30,
+            alignItems: "center",
+          }}
+        >
+          <Text style={{ color: "white", fontSize: 35 }}>Latest</Text>
+          <TouchableOpacity>
+            <Text
+              style={{
+                color: "#494557",
+                fontSize: 20,
+                textDecorationLine: "underline",
+              }}
+            >
+              See all
+            </Text>
+          </TouchableOpacity>
+        </View>
 
-      {/**The Latest Components */}
-      <View>
-        <Colors image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxzqrj7zmjUdMMcrk58eXFPmSJjX4mCFihhDWwAaWAl43VXxrbHuJJohGodu_9r_QRMOY&usqp=CAU" />
-      </View>
+        {/**Components for the Latest Colors */}
+        <ScrollView>
+          <View style={{ flexDirection: "row" }}></View>
+        </ScrollView>
+      </ScrollView>
     </View>
   );
 }
