@@ -206,7 +206,7 @@ export default function Search() {
         <ScrollView>
           <View style={{ flexDirection: "row" }}></View>
         </ScrollView>
-        <View><Text>Hello Elsie</Text></View>
+        
         
       </ScrollView>
     </View>
