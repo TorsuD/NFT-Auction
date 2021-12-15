@@ -3,9 +3,9 @@ import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
-import Details from "./screens/Details";
-import Search from "./screens/Search";
-import Index from "./screens/Index";
+import Details from "./screens/Details page/Details";
+import Search from "./screens/Search page/Search";
+import Welcome from "./screens/Welcome page/Welcome";
 
 export default function App() {
   const MainNavigator = createStackNavigator();
@@ -15,9 +15,9 @@ export default function App() {
       <NavigationContainer>
         <MainNavigator.Navigator
           screenOptions={{ headerShown: false }}
-          initialRouteName="Index"
+          initialRouteName="Welcome"
         >
-          <MainNavigator.Screen name="Index" component={Index} />
+          <MainNavigator.Screen name="Welcome" component={Welcome} />
           <MainNavigator.Screen name="Search" component={Search} />
           <MainNavigator.Screen name="Details" component={Details} />
         </MainNavigator.Navigator>
