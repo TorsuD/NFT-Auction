@@ -2,7 +2,7 @@ import react from "react";
 import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
-  body: {
+  contain: {
     backgroundColor: "#1e1a31",
     flex: 1,
   },
@@ -32,5 +32,40 @@ export const styles = StyleSheet.create({
     paddingTop: 80,
     justifyContent: "space-between",
   },
-  ionicon: { marginRight: 5 },
+
+  ionicon: {
+    marginRight: 5,
+  },
+
+  subHeading: {
+    justifyContent: "space-between",
+    alignItems: "center",
+    flexDirection: "row",
+  },
+
+  searchBar: {
+    flexDirection: "row",
+    alignItems: "center",
+    marginTop: 30,
+    padding: 20,
+    backgroundColor: "#343146",
+    margin: 20,
+    borderRadius: 20,
+  },
+  innerSearch: {
+    color: "grey",
+    fontSize: 20,
+    marginLeft: 10,
+  },
+  popular: {
+    color: "white",
+    fontSize: 40,
+    marginLeft: 20,
+  },
+  seeAll: {
+    color: "white",
+    fontSize: 15,
+    marginRight: 15,
+    textDecorationLine: "underline",
+  },
 });

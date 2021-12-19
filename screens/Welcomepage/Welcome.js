@@ -1,11 +1,11 @@
 import React from "react";
 import { View, Text } from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
-import style, { styles } from "./style";
+import { styles } from "../Welcomepage/style";
 
 export default function Welcome({ navigation }) {
   return (
-    <View style={styles.outerHeader}>
+    <View style={styles.container}>
       <Text style={styles.header}>
         Welcome to the
         <Text style={styles.innerHeader}> NFT Auction</Text>
@@ -26,7 +26,7 @@ export default function Welcome({ navigation }) {
       <View style={styles.outerTextDesign}>
         <TouchableOpacity
           onPress={() => {
-            navigation.navigate("Search");
+            navigation.navigate("Main");
           }}
         >
           <Text style={styles.textDesign}>Jump right into it!</Text>

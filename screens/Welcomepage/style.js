@@ -38,13 +38,21 @@ export const styles = StyleSheet.create({
     fontWeight: "100",
     justifyContent: "center",
   },
-  outerHeader: {
+
+  container: {
     backgroundColor: "#060921",
     flex: 1,
     paddingTop: 155,
     paddingHorizontal: 20,
   },
-  header: { color: "white", fontSize: 80, fontWeight: "100" },
+  header: {
+    color: "white",
+    fontSize: 80,
+    fontWeight: "100",
+  },
 
-  innerHeader: { color: "#cf2971", fontWeight: "600" },
+  innerHeader: {
+    color: "#cf2971",
+    fontWeight: "600",
+  },
 });
