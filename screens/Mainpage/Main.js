@@ -5,7 +5,7 @@ import { Ionicons } from "@expo/vector-icons";
 import { TouchableOpacity, ScrollView } from "react-native-gesture-handler";
 import Art from "../../components/Art";
 
-export default function Main() {
+export default function Main({ navigation }) {
   return (
     //NFT Status Bar
     <View style={styles.contain}>
@@ -39,9 +39,7 @@ export default function Main() {
         </View>
 
         {/**NFT picture */}
-        <TouchableOpacity>
-          <Art />
-        </TouchableOpacity>
+        <Art />
       </ScrollView>
     </View>
   );
