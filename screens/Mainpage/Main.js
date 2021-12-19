@@ -32,14 +32,16 @@ export default function Main() {
       </TouchableOpacity>
 
       {/**Heading */}
-      <View style={styles.subHeading}>
-        <Text style={styles.popular}>Popular</Text>
-        <Text style={styles.seeAll}>See all</Text>
-      </View>
-
-      {/**NFT picture */}
       <ScrollView>
-        <Art />
+        <View style={styles.subHeading}>
+          <Text style={styles.popular}>Popular</Text>
+          <Text style={styles.seeAll}>See all</Text>
+        </View>
+
+        {/**NFT picture */}
+        <TouchableOpacity>
+          <Art />
+        </TouchableOpacity>
       </ScrollView>
     </View>
   );
