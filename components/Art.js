@@ -9,7 +9,7 @@ const Art = (props) => {
       <Image source={require("../assets/cm.jpg")} style={styles.image} />
       <View style={styles.titleView}>
         <Text style={styles.title}>Pink Ocean</Text>
-        <Text>015</Text>
+        <Text style={styles.pricing}>015</Text>
       </View>
     </View>
   );
@@ -23,12 +23,14 @@ const styles = StyleSheet.create({
     marginTop: 30,
     alignSelf: "center",
   },
+
   image: {
     height: 350,
     width: 350,
     position: "relative",
     borderRadius: 40,
   },
+
   titleView: {
     justifyContent: "space-between",
     flexDirection: "row",
@@ -44,10 +46,15 @@ const styles = StyleSheet.create({
   title: {
     color: "white",
     fontSize: 25,
-    width: 330,
+    width: 295,
     marginTop: 10,
     marginLeft: 20,
     fontWeight: "700",
+  },
+  pricing: {
+    color: "white",
+    fontSize: 20,
+    marginRight: 10,
   },
 });
 
