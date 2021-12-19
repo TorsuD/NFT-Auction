@@ -37,8 +37,8 @@ export default function Main() {
         <Text style={styles.seeAll}>See all</Text>
       </View>
 
+      {/**NFT picture */}
       <ScrollView>
-        {/**NFT picture */}
         <Art />
       </ScrollView>
     </View>

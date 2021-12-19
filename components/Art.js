@@ -1,10 +1,7 @@
 import React from "react";
 import { View, Text, StyleSheet, Image } from "react-native";
 
-/**
- * @author
- * @function Art
- **/
+//Component Art
 const Art = (props) => {
   const { container } = styles;
   return (
@@ -18,6 +15,7 @@ const Art = (props) => {
   );
 };
 
+//Styling of the NFT ART
 const styles = StyleSheet.create({
   container: {
     alignContent: "center",
