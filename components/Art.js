@@ -1,14 +1,21 @@
 import React from "react";
 import { View, Text, StyleSheet, Image } from "react-native";
+import { AntDesign } from "@expo/vector-icons";
 
 //Component Art
-const Art = (props) => {
-  const { container } = styles;
+const Art = () => {
   return (
     <View style={styles.container}>
       <Image source={require("../assets/cm.jpg")} style={styles.image} />
       <View style={styles.titleView}>
         <Text style={styles.title}>Pink Ocean</Text>
+        <AntDesign name="upcircleo" size={24} color="black" style={styles.up} />
+        <AntDesign
+          name="downcircleo"
+          size={24}
+          color="black"
+          style={styles.down}
+        />
         <Text style={styles.pricing}>015</Text>
       </View>
     </View>
@@ -38,6 +45,7 @@ const styles = StyleSheet.create({
     position: "absolute",
     top: 290,
     height: 60,
+    width: 350,
     backgroundColor: "rgba(162, 193, 245, 0.85)",
     borderBottomLeftRadius: 40,
     borderBottomRightRadius: 40,
@@ -46,7 +54,7 @@ const styles = StyleSheet.create({
   title: {
     color: "white",
     fontSize: 25,
-    width: 295,
+
     marginTop: 4,
     marginLeft: 20,
     fontWeight: "700",
@@ -55,6 +63,13 @@ const styles = StyleSheet.create({
     color: "white",
     fontSize: 20,
     marginRight: 10,
+  },
+  up: {
+    color: "white",
+    marginLeft: 100,
+  },
+  down: {
+    color: "white",
   },
 });
 
