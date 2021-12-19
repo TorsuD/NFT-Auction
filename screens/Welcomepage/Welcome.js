@@ -23,15 +23,15 @@ export default function Welcome({ navigation }) {
         </Text>
       </View>
 
-      <View style={styles.outerTextDesign}>
-        <TouchableOpacity
-          onPress={() => {
-            navigation.navigate("Main");
-          }}
-        >
+      <TouchableOpacity
+        onPress={() => {
+          navigation.navigate("Main");
+        }}
+      >
+        <View style={styles.outerTextDesign}>
           <Text style={styles.textDesign}>Jump right into it!</Text>
-        </TouchableOpacity>
-      </View>
+        </View>
+      </TouchableOpacity>
     </View>
   );
 }
