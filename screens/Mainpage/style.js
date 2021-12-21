@@ -39,8 +39,9 @@ export const styles = StyleSheet.create({
 
   subHeading: {
     justifyContent: "space-between",
-    alignItems: "center",
+    alignItems: "baseline",
     flexDirection: "row",
+    marginBottom: 20,
   },
 
   searchBar: {
@@ -63,9 +64,15 @@ export const styles = StyleSheet.create({
     marginLeft: 20,
   },
   seeAll: {
-    color: "white",
-    fontSize: 15,
+    color: "grey",
+    fontSize: 20,
     marginRight: 15,
     textDecorationLine: "underline",
+  },
+  latest: {
+    color: "white",
+    fontSize: 40,
+    marginLeft: 20,
+    marginTop: 20,
   },
 });
