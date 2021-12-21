@@ -4,6 +4,7 @@ import { styles } from "../Mainpage/style";
 import { Ionicons } from "@expo/vector-icons";
 import { TouchableOpacity, ScrollView } from "react-native-gesture-handler";
 import Art from "../../components/Art";
+import LatestArt from "../../components/LatestArt";
 
 export default function Main({ navigation }) {
   return (
@@ -40,6 +41,15 @@ export default function Main({ navigation }) {
 
         {/**NFT picture */}
         <Art />
+
+        {/**Latest NFT Art */}
+        <View style={styles.subHeading}>
+          <Text style={styles.latest}>Latest</Text>
+          <Text style={styles.seeAll}>See all</Text>
+        </View>
+
+        <LatestArt />
+        <LatestArt />
       </ScrollView>
     </View>
   );
