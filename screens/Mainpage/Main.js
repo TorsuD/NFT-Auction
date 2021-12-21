@@ -48,8 +48,15 @@ export default function Main({ navigation }) {
           <Text style={styles.seeAll}>See all</Text>
         </View>
 
-        <LatestArt />
-        <LatestArt />
+        <ScrollView horizontal={true}>
+          <View style={styles.latestArt}>
+            <LatestArt />
+            <LatestArt />
+            <LatestArt />
+            <LatestArt />
+            <LatestArt />
+          </View>
+        </ScrollView>
       </ScrollView>
     </View>
   );
