@@ -75,4 +75,7 @@ export const styles = StyleSheet.create({
     marginLeft: 20,
     marginTop: 20,
   },
+  latestArt: {
+    flexDirection: "row",
+  },
 });
