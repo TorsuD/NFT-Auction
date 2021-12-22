@@ -4,12 +4,12 @@ import { AntDesign } from "@expo/vector-icons";
 import { TouchableOpacity } from "react-native-gesture-handler";
 
 //Component of the NFT Art
-const Art = () => {
+const Art = (props) => {
   return (
     <View style={styles.container}>
-      <Image source={require("../assets/cm.jpg")} style={styles.image} />
+      <Image source={props.image} style={styles.image} />
       <View style={styles.titleView}>
-        <Text style={styles.title}>Pink Ocean</Text>
+        <Text style={styles.title}>{props.title}</Text>
         <TouchableOpacity>
           <AntDesign
             name="upcircleo"
@@ -26,7 +26,7 @@ const Art = () => {
             style={styles.down}
           />
         </TouchableOpacity>
-        <Text style={styles.pricing}>015</Text>
+        <Text style={styles.pricing}>{props.pricing}</Text>
       </View>
     </View>
   );
@@ -37,7 +37,6 @@ const styles = StyleSheet.create({
   container: {
     alignContent: "center",
     position: "relative",
-
     alignSelf: "center",
   },
 
@@ -56,7 +55,7 @@ const styles = StyleSheet.create({
     top: 290,
     height: 60,
     width: 350,
-    backgroundColor: "rgba(162, 193, 245, 0.85)",
+    backgroundColor: "rgba(162, 193, 245, 0.65)",
     borderBottomLeftRadius: 40,
     borderBottomRightRadius: 40,
   },
