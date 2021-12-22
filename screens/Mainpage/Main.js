@@ -39,10 +39,15 @@ export default function Main({ navigation }) {
           <Text style={styles.seeAll}>See all</Text>
         </View>
 
-        {/**NFT picture */}
-        <Art />
+        {/**NFT Popular picture */}
 
-        {/**Latest NFT Art */}
+        <Art
+          title="Monkey fever"
+          image={require("../../assets/cm.jpg")}
+          pricing="140"
+        />
+
+        {/**Latest NFT Arts in a horizontal scrollview */}
         <View style={styles.subHeading}>
           <Text style={styles.latest}>Latest</Text>
           <Text style={styles.seeAll}>See all</Text>
@@ -50,13 +55,34 @@ export default function Main({ navigation }) {
 
         <ScrollView horizontal={true}>
           <View style={styles.latestArt}>
-            <LatestArt />
-            <LatestArt />
-            <LatestArt />
-            <LatestArt />
-            <LatestArt />
+            <LatestArt
+              image={require("../../assets/artistic.jpg")}
+              title="Orange"
+              pricing="12"
+            />
+            <LatestArt
+              image={require("../../assets/hehe.jpeg")}
+              title="Purple eye"
+              pricing="4"
+            />
+            <LatestArt
+              image={require("../../assets/colorful.jpg")}
+              title="Colorful"
+              pricing="8"
+            />
+            <LatestArt
+              image={require("../../assets/powder.jpeg")}
+              title="Powder"
+              pricing="90"
+            />
+            <LatestArt
+              image={require("../../assets/jordan.jpg")}
+              title="Jordan"
+              pricing="8"
+            />
           </View>
         </ScrollView>
+        {/* Below the Latest Arts*/}
       </ScrollView>
     </View>
   );
