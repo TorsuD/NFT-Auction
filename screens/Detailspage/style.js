@@ -5,12 +5,12 @@ export const styles = StyleSheet.create({
   // Upper Container
   container: {
     flex: 1,
-    backgroundColor: "#1e1a31",
+    backgroundColor: "#42cbf5",
   },
 
   upperContainer: {
     flex: 0.65,
-    backgroundColor: "#1e1a31",
+    backgroundColor: "rgba(108, 213, 245,0.4)",
   },
 
   header: {
@@ -38,7 +38,7 @@ export const styles = StyleSheet.create({
 
   //Lower Container
   lowerContainer: {
-    backgroundColor: "pink",
+    backgroundColor: "#1e1a31",
     flex: 0.4,
     borderTopLeftRadius: 30,
     borderTopRightRadius: 30,
