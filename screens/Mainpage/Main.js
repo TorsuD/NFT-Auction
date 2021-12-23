@@ -28,7 +28,7 @@ export default function Main({ navigation }) {
       <TouchableOpacity>
         <View style={styles.searchBar}>
           <Ionicons name="search" size={24} color="grey" />
-          <Text style={styles.innerSearch}> Search</Text>
+          <Text style={styles.innerSearch}> Search </Text>
         </View>
       </TouchableOpacity>
 
@@ -40,12 +40,17 @@ export default function Main({ navigation }) {
         </View>
 
         {/**NFT Popular picture */}
-
-        <Art
-          title="Monkey fever"
-          image={require("../../assets/cm.jpg")}
-          pricing="140"
-        />
+        <TouchableOpacity
+          onPress={() => {
+            navigation.navigate("Details");
+          }}
+        >
+          <Art
+            title="Monkey fever"
+            image={require("../../assets/cm.jpg")}
+            pricing="140"
+          />
+        </TouchableOpacity>
 
         {/**Latest NFT Arts in a horizontal scrollview */}
         <View style={styles.subHeading}>
@@ -60,6 +65,7 @@ export default function Main({ navigation }) {
               title="Orange"
               pricing="12"
             />
+
             <LatestArt
               image={require("../../assets/hehe.jpeg")}
               title="Purple eye"
