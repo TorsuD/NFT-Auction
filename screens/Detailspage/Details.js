@@ -6,14 +6,26 @@ import { EvilIcons } from "@expo/vector-icons";
 import { SimpleLineIcons } from "@expo/vector-icons";
 import { MaterialIcons } from "@expo/vector-icons";
 import { TouchableOpacity } from "react-native-gesture-handler";
+import { ImageBackground } from "react-native-web";
 
-export default function Details() {
+export default function Details({ navigation }) {
   return (
     //Upper Container
     <View style={styles.container}>
       <View style={styles.upperContainer}>
         <View style={styles.header}>
-          <AntDesign name="left" size={24} color="white" style={styles.space} />
+          <TouchableOpacity
+            onPress={() => {
+              navigation.navigate("Main");
+            }}
+          >
+            <AntDesign
+              name="left"
+              size={24}
+              color="white"
+              style={styles.space}
+            />
+          </TouchableOpacity>
           <Text style={styles.headerDetail}>Details</Text>
           <AntDesign
             name="hearto"
