@@ -10,7 +10,7 @@ import { ImageBackground } from "react-native-web";
 
 export default function Details({ navigation }) {
   return (
-    //Upper Container
+    //the Upper Container
     <View style={styles.container}>
       <View style={styles.upperContainer}>
         <View style={styles.header}>
