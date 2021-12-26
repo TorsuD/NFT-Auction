@@ -41,7 +41,7 @@ export default function Details({ navigation }) {
         </View>
       </View>
 
-      {/**Lower Container */}
+      {/** The Lower Container */}
       {/**The 1st Lower Header */}
       <View style={styles.lowerContainer}>
         <View style={styles.lowerHeader}>
